@@ -1,12 +1,22 @@
 <template>
-  <div>
-    
-  </div>
+  <AppMain />
 </template>
 
 <script>
+import axios from 'axios';
+import AppMain from "./components/AppMain.vue";
+
+
 export default {
-  
+  components: {
+    // AppHeader,
+    AppMain,
+  },
+  data(){
+    return{
+      // store,
+    };
+  },  
 }
 </script>
 

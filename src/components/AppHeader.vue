@@ -1,7 +1,7 @@
 <template>
-    <div>
-        
-    </div>
+    <header>
+        <img src="./images/logo-dark.png">
+    </header>
 </template>
 
 <script>
