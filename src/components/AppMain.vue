@@ -22,11 +22,24 @@
         <section class="socials d-flex justify-content-between">
             <img v-for="(social, indexSocial) in socialsList" :key="social.indexSocial" :src="getSocialImages(indexSocial)">
         </section>
+
+        <!-- FEATURES -->
+        <section class="features">
+            <h3>Key Features</h3>
+            <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            <div class="row">
+                <div class="col" v-for="(feature, indexFeature) in features" :key="feature.title">
+                    <FeatureCard :featureIcon="feature.icon" :featureTitle="feature.title" :featureText="feature.text" :featureMore="feature.more" />
+                </div>
+            </div>
+        </section>
+
     </main>
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
+import FeatureCard from "./FeatureCard.vue";
 export default {
     data(){
         return{
@@ -38,12 +51,46 @@ export default {
                 "shopify",
                 "spotify",
             ],
+
+            
+            features: [
+                {
+                    icon:  "fa-solid fa-layer-group",
+                    title: "Modular" ,
+                    text: "lorem ipsum dolor sit amet" ,
+                    more: "Read More",
+                },
+                {
+                    icon:  "fa-solid fa-desktop",
+                    title: "Responsive" ,
+                    text: "lorem ipsum dolor sit amet" ,
+                    more: "Read More",
+                },
+                {
+                    icon:  "fa-solid fa-crosshairs",
+                    title: "Customizable" ,
+                    text: "lorem ipsum dolor sit amet" ,
+                    more: "Read More",
+                },
+                {
+                    icon:  "fa-solid fa-maximize",
+                    title: "Scalable" ,
+                    text: "lorem ipsum dolor sit amet" ,
+                    more: "Read More",
+                },
+            ]
         }
     },
+
+    components: { FeatureCard },
 
     methods: {
         getSocialImages(index){
             return `/src/components/images/${this.socialsList[index]}.svg`
+        },
+
+        getFeatureIcon(index){
+            return `fa-solid ${this.features[index].icon}`
         }
     }
 }
@@ -67,6 +114,10 @@ main{
         img{
             width: 6%;
         }
+    }
+
+    .card{
+        height: 20rem;
     }
 }
     
