@@ -29,7 +29,10 @@
             <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
             <div class="row">
                 <div class="col" v-for="(feature, indexFeature) in features" :key="feature.title">
-                    <FeatureCard :featureIcon="feature.icon" :featureTitle="feature.title" :featureText="feature.text" :featureMore="feature.more" />
+                    <div class="card">
+                        <span class="border border-primary background background-primary"><i :class="features[indexFeature].icon"></i></span>
+                        <FeatureCard :featureIcon="feature.icon" :featureTitle="feature.title" :featureText="feature.text" :featureMore="feature.more" />
+                    </div>
                 </div>
             </div>
         </section>

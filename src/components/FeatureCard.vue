@@ -1,10 +1,10 @@
 <template>
-        <div class="card">
-            <i :class="{featureIcon}"> </i>
+        
+            <!-- <i :class="{featureIcon}"> </i> -->
             <h5>{{ featureTitle }}</h5>
             <p>{{ featureText }}</p>
             <a href="">{{ featureMore }}</a>
-        </div>
+        
 </template>
 
 <script>
