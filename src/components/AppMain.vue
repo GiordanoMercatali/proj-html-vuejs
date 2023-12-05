@@ -31,8 +31,30 @@
                 <div class="col" v-for="(feature, indexFeature) in features" :key="feature.title">
                     <div class="card">
                         <span class="border border-primary background background-primary"><i :class="features[indexFeature].icon"></i></span>
-                        <FeatureCard :featureIcon="feature.icon" :featureTitle="feature.title" :featureText="feature.text" :featureMore="feature.more" />
+                        <FeatureCard :featureTitle="feature.title" :featureText="feature.text" />
+                        <a href="">Read More<i class="fa-solid fa-angle-right"></i></a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICKSTART -->
+        <section class="quickstart">
+            <div class="text-center">
+                <p class="text-primary">Quickstart</p>
+                <h3>Awesome isn't it? Let's dive in!</h3>
+                <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            </div>
+            
+            <div class="text-center border rounded border-dark bg-dark">
+                <div class="row-6 d-flex border rounded border-secondary bg-secondary">
+                    <div class="col-3 border-dark rounded bg-dark">Ciao</div>
+                    <div class="col-3">Ciao</div>
+                    <div class="col-3">Ciao</div>
+                    <div class="col-3">Ciao</div>
+                </div>
+                <div class="row-6">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, accusamus ex. Delectus esse, ipsa ducimus ad eius consequatur! Dolores consequuntur commodi iste molestiae eos facere qui amet aut modi voluptate!
                 </div>
             </div>
         </section>
@@ -61,25 +83,25 @@ export default {
                     icon:  "fa-solid fa-layer-group",
                     title: "Modular" ,
                     text: "lorem ipsum dolor sit amet" ,
-                    more: "Read More",
+                    
                 },
                 {
                     icon:  "fa-solid fa-desktop",
                     title: "Responsive" ,
                     text: "lorem ipsum dolor sit amet" ,
-                    more: "Read More",
+                    
                 },
                 {
                     icon:  "fa-solid fa-crosshairs",
                     title: "Customizable" ,
                     text: "lorem ipsum dolor sit amet" ,
-                    more: "Read More",
+                    
                 },
                 {
                     icon:  "fa-solid fa-maximize",
                     title: "Scalable" ,
                     text: "lorem ipsum dolor sit amet" ,
-                    more: "Read More",
+                    
                 },
             ]
         }
@@ -106,6 +128,10 @@ export default {
 main{
   margin: 0 auto;
   width: 60%;
+
+  section{
+    margin: 4rem 0;
+  }
 
     .jumbotron{
         img{
