@@ -46,9 +46,9 @@
                 <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
             </div>
             
-            <div class="text-center border rounded border-dark bg-dark">
-                <div class="row-6 d-flex border rounded border-secondary bg-secondary">
-                    <div class="col-3 border-dark rounded bg-dark">Ciao</div>
+            <div class="text-center border rounded dark-gray-box">
+                <div class="row-6 d-flex border rounded gray-box">
+                    <div class="col-3 border-dark rounded dark-gray-box">Ciao</div>
                     <div class="col-3">Ciao</div>
                     <div class="col-3">Ciao</div>
                     <div class="col-3">Ciao</div>
@@ -122,7 +122,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use "../style/general.scss";
+@use "../style/partials/variables" as *;
 @import "@fortawesome/fontawesome-free/css/all.css" ;
 
 main{
@@ -147,6 +147,19 @@ main{
 
     .card{
         height: 20rem;
+    }
+
+    .quickstart{
+        .dark-gray-box{
+            background-color: $background-color-18;
+            border-color: $border-color-8;
+            color: $text-color-1;
+        }
+
+        .gray-box{
+            background-color: $border-color-4;
+            border-color: $border-color-4;
+            }
     }
 }
     
