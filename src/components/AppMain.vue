@@ -59,6 +59,22 @@
             </div>
         </section>
 
+        <!-- TOOLS AND DOCS -->
+        <section class="tools-docs">
+            <div class="row">
+                <div class="col-6">
+                    <h3>Build tools and extensive documentation</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis! Facere ea dolores exercitationem omnis illum dicta. Totam possimus recusandae ad ea incidunt, iure, nam dolor, necessitatibus aspernatur id repellendus!</p>
+                    <ul>
+                        <li v-for="(tool, indexTool) in tools" :key="indexTool"><i class="fa-regular fa-square-check"></i> {{ tool }}</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <img src="./images/1.png">
+                </div>
+            </div>
+        </section>
+
     </main>
 </template>
 
@@ -103,6 +119,12 @@ export default {
                     text: "lorem ipsum dolor sit amet" ,
                     
                 },
+            ],
+
+            tools: [
+                "Digital Marketing Solutions for Tomorrow",
+                "Our Talented & Experienced Marketing Agency",
+                "Create your own skin to match your brand",
             ]
         }
     },
@@ -160,6 +182,26 @@ main{
             background-color: $border-color-4;
             border-color: $border-color-4;
             }
+    }
+
+    .tools-docs{
+
+        color: $text-color-5;
+
+        h3{
+            color: $text-color-11;
+        }
+
+        img{
+            max-width: 60%;
+        }
+
+        ul{
+            list-style-type: none;
+            .fa-square-check{
+                color: $text-color-8;
+            }
+        }
     }
 }
     
