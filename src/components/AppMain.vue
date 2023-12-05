@@ -75,12 +75,26 @@
             </div>
         </section>
 
+        <!-- PLANS (RATES) -->
+        <section class="plans">
+            <h3>Our rates for developer from landrick team</h3>
+            <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            <div class="row">
+                <div class="col" v-for="(plan, indexPlan) in plans" :key="plan.title">
+                    <div class="card">
+                        <PlanCard :planType="plan.plan_type" :planBest="plan.isBest" :planPrice="plan.price" :planDesc="plan.desc" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 </template>
 
 <script>
 // import axios from "axios";
 import FeatureCard from "./FeatureCard.vue";
+import PlanCard from "./PlanCard.vue";
 export default {
     data(){
         return{
@@ -125,11 +139,32 @@ export default {
                 "Digital Marketing Solutions for Tomorrow",
                 "Our Talented & Experienced Marketing Agency",
                 "Create your own skin to match your brand",
+            ],
+
+            plans: [
+                {
+                    plan_type: "Basic",
+                    isBest: false,
+                    price: "$9.00",
+                    desc: "Lorem ipsum dolor sit amet.",
+                },
+                {
+                    plan_type: "Business",
+                    isBest: true,
+                    price: "$39.00",
+                    desc: "Lorem ipsum dolor sit amet.",
+                },
+                {
+                    plan_type: "Enterprise",
+                    isBest: false,
+                    price: "$79.00",
+                    desc: "Lorem ipsum dolor sit amet.",
+                },
             ]
         }
     },
 
-    components: { FeatureCard },
+    components: { FeatureCard, PlanCard },
 
     methods: {
         getSocialImages(index){
@@ -143,7 +178,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use "../style/partials/variables" as *;
 @import "@fortawesome/fontawesome-free/css/all.css" ;
 
@@ -167,8 +202,10 @@ main{
         }
     }
 
-    .card{
-        height: 20rem;
+    .features{
+        .card{
+        height: 10rem;
+    }
     }
 
     .quickstart{
@@ -203,6 +240,15 @@ main{
             }
         }
     }
+
+    .plans{
+        .orange-box{
+            rotate: 30deg;
+            background-color: $background-color-9;
+            color: $text-color-1;
+        }
+    }
+
 }
     
 </style>
