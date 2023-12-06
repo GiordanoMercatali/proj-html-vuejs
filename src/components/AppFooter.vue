@@ -121,6 +121,8 @@ export default {
 
 footer{
 
+    padding: 0 10rem;
+
     .upper-footer{
         .col{
             max-width: 25%;
@@ -168,6 +170,13 @@ footer{
 
     background-color: $background-color-20;
     .lower-footer{
+        display: flex;
+        justify-content: center;
+
+            .row{
+                gap: 50rem;
+            }
+
             li{
                 list-style-type: none;
             }
