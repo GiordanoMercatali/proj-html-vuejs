@@ -17,10 +17,10 @@
             </div>
         </section>
 
-        <br>
+        <hr>
         <!-- SOCIALS -->
         <section class="socials d-flex justify-content-between">
-            <img v-for="(social, indexSocial) in socialsList" :key="social.indexSocial" :src="getSocialImages(indexSocial)">
+            <img v-for="(social, indexSocial) in socialsList" :key="indexSocial" :src="getSocialImages(indexSocial)">
         </section>
 
         <!-- FEATURES -->
@@ -46,12 +46,12 @@
                 <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
             </div>
             
-            <div class="text-center border rounded dark-gray-box">
+            <div class="p-3 text-center border rounded dark-gray-box">
                 <div class="row-6 d-flex border rounded gray-box">
-                    <div class="col-3 border-dark rounded dark-gray-box">Ciao</div>
-                    <div class="col-3">Ciao</div>
-                    <div class="col-3">Ciao</div>
-                    <div class="col-3">Ciao</div>
+                    <div class="col-3 border-dark rounded dark-gray-box">npm</div>
+                    <div class="col-3">nuget</div>
+                    <div class="col-3">spm</div>
+                    <div class="col-3">github</div>
                 </div>
                 <div class="row-6 d-flex ms-1 mt-1">
                     <p><span>$</span> npm install <span>-g</span> claps.js </p>
@@ -97,7 +97,7 @@
         <section class="get-started text-center">
             <h3>Want to be among the first to find out?</h3>
             <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-            <div class="wrapper position-relative"><input type="email" placeholder="Email Address" class="rounded-pill w-100"> <button class=" rounded-pill position-absolute top-0 end-0">Get Started</button></div>
+            <div class="wrapper position-relative"><input type="email" placeholder="Email Address" class="ps-3 rounded-pill w-100"> <button class=" rounded-pill position-absolute top-0 end-0">Get Started</button></div>
         </section>
 
     </main>
@@ -245,8 +245,11 @@ main{
         }
 
         .icon-container{
-            width: 25%;
-            text-align: center;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 0.1rem;
             color: $text-color-8;
             background-color: $background-color-16;
