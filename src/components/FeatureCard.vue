@@ -1,19 +1,13 @@
 <template>
-        
-            <!-- <i :class="{featureIcon}"> </i> -->
-            <h5>{{ featureTitle }}</h5>
-            <p>{{ featureText }}</p>
-            <!-- <a href="">{{ featureMore }}</a> -->
-        
+    <h5>{{ featureTitle }}</h5>
+    <p>{{ featureText }}</p>
 </template>
 
 <script>
 export default {
-    props:{
-        // featureIcon: String,
+    props:{        
         featureTitle: String,
         featureText: String,
-        // featureMore: String,
     },
 }
 </script>

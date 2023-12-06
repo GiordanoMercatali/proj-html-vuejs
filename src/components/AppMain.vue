@@ -4,11 +4,11 @@
         <section class="jumbotron">
             <div class="row d-flex">
                 <div class="col-6">
-                    <div class="border border-primary rounded-pill">Development</div>
+                    <div class="rounded-pill">Development</div>
                     <h2>A Complete Developed Toolset</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, nostrum consectetur? Optio voluptates sit dignissimos. Itaque voluptatibus eligendi iste nulla corrupti, reprehenderit quo enim quae tempore nesciunt aspernatur culpa illum!</p>
-                    <button class="btn btn-primary bg-primary rounded me-3">Get Started</button>
-                    <button class="btn btn-primary bg-light rounded">Documentation</button>
+                    <button class=" rounded me-3">Get Started</button>
+                    <button class=" doc-btn rounded">Documentation</button>
                     <p>Current Version: 2.6.0</p>
                 </div>
                 <div class="col-6">
@@ -29,8 +29,8 @@
             <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
             <div class="row">
                 <div class="col" v-for="(feature, indexFeature) in features" :key="feature.title">
-                    <div class="card">
-                        <span class="border border-primary background background-primary"><i :class="features[indexFeature].icon"></i></span>
+                    <div class="card p-2">
+                        <span class="icon-container rounded"><i :class="features[indexFeature].icon"></i></span>
                         <FeatureCard :featureTitle="feature.title" :featureText="feature.text" />
                         <a href="">Read More<i class="fa-solid fa-angle-right"></i></a>
                     </div>
@@ -53,10 +53,14 @@
                     <div class="col-3">Ciao</div>
                     <div class="col-3">Ciao</div>
                 </div>
-                <div class="row-6">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, accusamus ex. Delectus esse, ipsa ducimus ad eius consequatur! Dolores consequuntur commodi iste molestiae eos facere qui amet aut modi voluptate!
+                <div class="row-6 d-flex ms-1 mt-1">
+                    <p><span>$</span> npm install <span>-g</span> claps.js </p>
                 </div>
             </div>
+            <ul class="d-flex gap-2">
+                <li><i class="fa-regular fa-circle-check"></i>Organize your data</li>
+                <li><i class="fa-regular fa-circle-check"></i>Work with any team</li>
+            </ul>
         </section>
 
         <!-- TOOLS AND DOCS -->
@@ -68,6 +72,7 @@
                     <ul>
                         <li v-for="(tool, indexTool) in tools" :key="indexTool"><i class="fa-regular fa-circle-check"></i> {{ tool }}</li>
                     </ul>
+                    <button class="rounded"> Read More -> </button>
                 </div>
                 <div class="col-6">
                     <img src="./images/1.png">
@@ -81,7 +86,7 @@
             <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
             <div class="row">
                 <div class="col" v-for="(plan, indexPlan) in plans" :key="plan.title">
-                    <div class="card">
+                    <div class="card p-2 shadow">
                         <PlanCard :planType="plan.plan_type" :planBest="plan.isBest" :planPrice="plan.price" :planDesc="plan.desc" />
                     </div>
                 </div>
@@ -92,7 +97,7 @@
         <section class="get-started text-center">
             <h3>Want to be among the first to find out?</h3>
             <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-            <div class="wrapper position-relative"><input type="email" placeholder="Email Address" class="rounded-pill w-100"> <button class="btn btn-primary rounded-pill position-absolute top-0 end-0">Get Started</button></div>
+            <div class="wrapper position-relative"><input type="email" placeholder="Email Address" class="rounded-pill w-100"> <button class=" rounded-pill position-absolute top-0 end-0">Get Started</button></div>
         </section>
 
     </main>
@@ -193,6 +198,31 @@ main{
   margin: 0 auto;
   width: 60%;
 
+  p, li{
+    color: $text-color-5;
+  }
+
+  button{
+    background-color: $background-color-17;
+    color: $text-color-1;
+    padding: 0.4rem 0.8rem;
+  }
+
+  button.doc-btn{
+    background-color: $background-color-1;
+    color: $text-color-8;
+    border-color: $border-color-7;
+  }
+
+  .rounded-pill:not(input, button){
+    width: 50%;
+    text-align: center;
+    padding: 0.1rem;
+    color: $text-color-8;
+    background-color: $background-color-16;
+    border-color: $border-color-6;
+  }
+
   section{
     margin: 4rem 0;
   }
@@ -205,14 +235,23 @@ main{
 
     .socials{
         img{
-            width: 6%;
+            width: 10%;
         }
     }
 
     .features{
-        .card{
-        height: 10rem;
-    }
+            .card{
+            height: 10rem;
+        }
+
+        .icon-container{
+            width: 25%;
+            text-align: center;
+            padding: 0.1rem;
+            color: $text-color-8;
+            background-color: $background-color-16;
+            border-color: $border-color-6;
+        }
     }
 
     .quickstart{
@@ -226,11 +265,15 @@ main{
             background-color: $border-color-4;
             border-color: $border-color-4;
             }
+
+        .fa-circle-check, span{
+            color: $text-color-4;
+        }
     }
 
     .tools-docs{
 
-        color: $text-color-5;
+        
 
         h3{
             color: $text-color-11;
@@ -255,7 +298,7 @@ main{
         }
 
         .card{
-            color: $text-color-5;
+            
 
             .fa-circle-check{
                 color: $text-color-8;

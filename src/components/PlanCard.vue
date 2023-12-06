@@ -1,6 +1,6 @@
 <template>
     <div class="position-relative">
-        <div class="border border-primary rounded-pill">{{ planType }}</div>
+        <div class="rounded-pill">{{ planType }}</div>
         <div v-if="planBest" class="position-absolute top-0 end-0 orange-box">Best</div>
         <h4>{{ planPrice }}</h4>
         <p>Per Month</p>
@@ -9,7 +9,7 @@
         <ul>
             <li v-for="(perk, indexPerk) in perks" :key="indexPerk"> <i class="fa-regular fa-circle-check"></i> {{ perk }} </li>
         </ul>
-        <button class="btn btn-primary">Buy Now</button>
+        <button class="rounded w-100">Buy Now</button>
         <p>*No credit card required</p>
     </div>
 </template>
