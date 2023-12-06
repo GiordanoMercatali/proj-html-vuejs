@@ -66,7 +66,7 @@
                     <h3>Build tools and extensive documentation</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis! Facere ea dolores exercitationem omnis illum dicta. Totam possimus recusandae ad ea incidunt, iure, nam dolor, necessitatibus aspernatur id repellendus!</p>
                     <ul>
-                        <li v-for="(tool, indexTool) in tools" :key="indexTool"><i class="fa-regular fa-square-check"></i> {{ tool }}</li>
+                        <li v-for="(tool, indexTool) in tools" :key="indexTool"><i class="fa-regular fa-circle-check"></i> {{ tool }}</li>
                     </ul>
                 </div>
                 <div class="col-6">
@@ -235,18 +235,32 @@ main{
 
         ul{
             list-style-type: none;
-            .fa-square-check{
+            .fa-circle-check{
                 color: $text-color-8;
             }
         }
     }
 
     .plans{
+
+        h4{
+            color: $text-color-11;
+        }
+
+        .card{
+            color: $text-color-5;
+
+            .fa-circle-check{
+                color: $text-color-8;
+            }
+        }
+
         .orange-box{
             rotate: 30deg;
             background-color: $background-color-9;
             color: $text-color-1;
         }
+    
     }
 
 }
