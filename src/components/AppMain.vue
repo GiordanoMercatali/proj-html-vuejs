@@ -88,6 +88,13 @@
             </div>
         </section>
 
+        <!-- GET STARTED -->
+        <section class="get-started text-center">
+            <h3>Want to be among the first to find out?</h3>
+            <p>Start working with <span class="text-primary">Landrick</span>. Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            <div class="wrapper position-relative"><input type="email" placeholder="Email Address" class="rounded-pill w-100"> <button class="btn btn-primary rounded-pill position-absolute top-0 end-0">Get Started</button></div>
+        </section>
+
     </main>
 </template>
 
@@ -261,6 +268,20 @@ main{
             color: $text-color-1;
         }
     
+    }
+
+    .get-started{
+        .wrapper{
+           height: 3rem;
+
+            input{
+                height: 3rem;
+            }
+
+            button{
+                height: 3rem;
+            }
+        }
     }
 
 }

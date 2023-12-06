@@ -21,11 +21,6 @@ export default {
         planBest: Boolean,
         planPrice: String,
         planDesc: String,
-
-        /*plan_type: "Basic",
-                    isBest: false,
-                    price: "$9.00",
-                    desc: "Lorem ipsum dolor sit amet.", */
     },
 
     data(){
